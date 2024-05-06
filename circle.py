@@ -1,11 +1,13 @@
 class Circle:
-  pi = 3.14159
+  circles = []
+  PI = 3.14159
 
   def __init__(self, radius):
     self.radius = radius
+    Circle.circles.append(self)
 
   def area(self):
-    return Circle.pi * self.radius ** 2
+    return Circle.PI * self.radius ** 2
 
   def circumference(self):
-    return 2 * Circle.pi * self.radius
+    return 2 * Circle.PI * self.radius

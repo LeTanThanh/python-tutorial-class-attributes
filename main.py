@@ -1,5 +1,6 @@
 from circle import Circle
 from test import Test
+from product import Product
 
 if __name__ == "__main__":
   # Introduction to class attributes
@@ -19,3 +20,24 @@ if __name__ == "__main__":
 
   test = Test()
   print(test.x)
+
+  # When to use Python class attributes
+
+  # 1) Storing class constants
+
+  print(Circle.PI)
+
+  # 2) Tracking data across of all instances
+
+  Circle(10)
+  Circle(20)
+  print(len(Circle.circles))
+
+  # 3) Defining default values
+
+  product = Product(100)
+  print(product.net_price())
+
+  product = Product(100)
+  product.set_discount(0.05)
+  print(product.net_price())
